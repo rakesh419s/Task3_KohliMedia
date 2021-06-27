@@ -1,0 +1,8412 @@
+*{
+    margin: 0%;padding: 0%;font-family: 'Lato', sans-serif;;box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+body{
+    height: 100vh;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f1;
+}
+
+                                    /* newly added */
+
+html{
+    font-size: 62.5%;                      
+}
+
+
+.grad{
+    animation: grabnow 2s infinite;
+}
+@keyframes grabnow{
+    0%{color: #ff512f ;}
+    33.3%{color: #4568dc  ;}
+    66.6%{color: #ed4264 ;}
+}
+
+nav{
+    border: 0px solid blue;
+    margin: 0px;
+    background-color: #6c5ce7;
+    height: 8vh;
+    width: 200vw;                       /*added*/
+    position:-webkit-sticky;
+    /* box-shadow: 5px 6px #ebeff1; */
+    
+}
+#logo{
+    border: 0px solid blue;
+    padding: 0%;
+    margin: -0.9rem 0px 0px 0px;
+    height: 10vh;
+   
+    
+}
+.logo-name{
+    border: 0px solid blue;
+    margin: 0px 4rem 0px 0px;padding: 0%;
+    position: relative;
+    top: -2.5rem;
+    color: white;
+    font-size: 3rem;
+    
+    
+}
+
+.box{
+    border: 0px solid blue;
+    width: 20vw;
+    height: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    position: absolute;
+    right: 35rem;
+    top: 0.9rem;
+}
+.box:hover{
+    width: 30vw;
+}
+
+#reg{
+    text-decoration: none;
+    position: absolute;
+    color: black;
+    font-size: 2rem;
+    right: 2rem;
+    top: 1.5rem;
+    border: 0px solid black;
+    border-radius: 0px;
+    padding: 0.5rem 1%;
+}
+#reg:hover{
+    box-shadow: 0.1rem 0.2rem 1.5rem 0.3rem rgba(22, 6, 238, 0.822);
+    color: white;
+}
+#regin{
+    text-decoration: none;
+    position: absolute;
+    color: black;
+    font-size: 2rem;
+    right: 14rem;
+    top: 1.5rem;
+    border: 0px solid black;
+    padding: 0.5vh 1%;
+    
+}
+
+#regin:hover{
+    box-shadow: 0.1rem 0.2rem 1.5rem 0.3rem rgba(22, 6, 238, 0.822);
+    color: white;
+    
+}
+
+                       /* dropdown */
+    #menu {
+        border: 0px solid;
+    }
+    #menu > ul{
+        background-color:#6c5ce7;
+        top: 1rem;left: 1rem;
+    }
+
+    #menu ul{
+        list-style: none;
+        position: relative;padding: 0px;margin: 0px;float: left;
+
+    }
+    #menu a{
+        text-decoration: none;
+        line-height: 3.2rem;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        padding: 0 1.5rem;
+        display: block;
+    }
+    #menu ul li{
+        position: relative;
+        float: left;
+    }
+    #menu ul ul{
+        position: absolute;
+        top: 100%;display: none;
+        /* border: 1px solid; */
+        
+    }
+    #menu ul ul li{
+        float: none;
+        width: 20rem;
+        background-color: #3498db;border-left: 0.3rem solid  #3498db;
+       
+    }
+    #menu ul ul ul{
+        left: 100%;
+        top: -1px;
+    }
+    #menu ul li:hover > ul{
+        display: block;
+    }
+    #menu ul ul li:hover{
+        background: #6c5ce7;
+    }
+    #menu ul ul li:hover{
+        border-left: 3px solid;
+    }
+
+    #blog{
+    position: absolute;right: 5rem; top: 9rem;
+    font-size: 1.4rem;
+    }
+    #blog a{
+    text-decoration: none;
+    }
+
+
+
+
+                         /* image slider */
+
+    .imageslider{
+      
+        width: 100vw;
+        height: 49rem;
+        position: absolute;  
+        left: 50vw;
+        /* border: 1px solid; */
+        top: 56%;
+        background-image: url("front.jpg");
+        background-size: 100% 100%;
+        transform: translate(-50%,-50%);
+        animation: slide 10s infinite;
+        box-shadow:
+      0 0.3px 12.9px -47px rgba(0, 0, 0, 0.249),
+      0 0.8px 43.3px -47px rgba(0, 0, 0, 0.343),
+      0 14px 194px -47px rgba(0, 0, 0, 0.52)
+    ;
+        z-index: -1000;
+    }
+
+    @keyframes slide{
+        0% {background-image: url("front.jpg");}
+        40% {background-image: url("dm.jpg");}
+        60% {background-image: url("web.jpg");}
+        80% {background-image: url("app.jpg");}
+    }
+
+
+
+
+
+                             /* second navbar */
+    .secondnav{
+        width: 100vw;
+        height: 6.5rem;
+        
+        padding: 1.5rem 1rem 0px 1rem;
+        
+        /* position: fixed; */
+        border: 0px solid #1e90ff;
+    }
+
+    .secondnav.sticky{
+        position: fixed;
+        top: 0%;
+        padding: 0px 0px 0px 0px;margin: 0%;
+        font-size: 2rem;
+        border-bottom:5px solid #4b7bec;
+        background-color: #4b7bec;
+        font-weight: bold;
+        z-index: 9999;
+        
+       
+    }
+
+    .secondnav.sticky ul li a:hover{
+        border-bottom: 0.5rem solid white;
+        border-radius: 11%;
+    }
+    .secondnav ul li a{
+        color: #4b7bec;
+    }
+    .secondnav.sticky ul li a{
+        color: white;
+    }
+
+    .secondnav ul{
+        display: flex;
+        margin: 0;
+        padding: 0px 8rem;
+    }
+    .secondnav ul li{
+        list-style: none;
+    }
+    .secondnav ul li a{
+        text-decoration: none;
+        display: block;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+       
+    }
+    .secondnav ul li a:hover{
+        border-bottom: 4px  solid #3742fa;
+       
+    }
+
+
+
+ 
+                            /* cards */
+
+                                                                              /* web developer */
+                            /* html */
+.webdeveloper{
+    width: 100%;
+    height: 75%;
+    border-bottom: 1px solid  black;
+    position: relative;
+    top: 720px;
+}
+.webdeveloper:hover{
+    border-bottom: blue;
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+}
+
+.webdeveloper .maincardhtml{
+    position:absolute;
+    width: 220px;
+    height: 220px;
+    background-color: #ecf0f1;
+    left: 30%;top: 11.5%;
+    border-radius: 10px;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardhtml .cardhtml{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.webdeveloper .maincardhtml .cardhtml:hover{
+    transform: rotateY(180deg);
+}
+
+.webdeveloper .maincardhtml .cardhtml .fronthtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("html.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.webdeveloper .maincardhtml .cardhtml .backhtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    
+} 
+.head4{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.para{
+    position: absolute;
+    top: 29px;
+    left:10px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+}
+.readmore{
+    position: absolute;
+    top: 74.8%;
+    left: 55%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    /* box-shadow: -3px -4px 9px 0px; */
+    animation: change 3s infinite;
+}
+
+@keyframes change{
+    0%{border-top: 3px solid #7b4397;}
+    25%{border-right: 3px solid #7b4397;}
+    50%{border-bottom: 3px solid #7b4397;}
+    75%{border-left: 3px solid #7b4397;}
+}
+.readmore:hover{
+    border: 3px solid;
+}
+
+                   /* css */
+
+.webdeveloper .maincardcss{
+    position:absolute;
+    width: 220px;
+    height: 220px;
+    background-color: #ecf0f1;
+    left: 50%;top: 11.5%;
+    border-radius: 10px;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardcss .cardcss{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.webdeveloper .maincardcss .cardcss:hover{
+    transform: rotateY(180deg);
+}
+.webdeveloper .maincardcss .cardcss .frontcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("css.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+
+.webdeveloper .maincardcss .cardcss .backcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+                          /* js */
+
+.webdeveloper .maincardjs{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("js.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 10px;
+}
+                
+.webdeveloper .maincardjs .cardjs .backjs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+                          /* bt */
+
+.webdeveloper .maincardbt{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("bootstrap.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+                
+.webdeveloper .maincardbt .cardbt .backbt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+                          /* jq */
+
+.webdeveloper .maincardjq{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("jquery.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+                
+.webdeveloper .maincardjq .cardjq .backjq{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+
+                       /* title of web cards */
+.webtitle{
+    position: absolute;
+    width: 29%;
+    height: 20%;
+    top:20vh;left: 2rem;
+    /* order-bottom: 5px solid #3742fa; */
+}
+.webtitle .logodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;left: 1%;
+    font-size: 4vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+                                                                              /* app developer */
+
+.appdeveloper{
+    width: 100%;
+    height: 75%;
+    border-bottom: 1px solid  black;
+    position: relative;
+    top: 710px;
+}
+.appdeveloper:hover{
+    border-bottom: blue;
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+}
+
+.appdeveloper .maincardhtml{
+    position:absolute;
+    width: 220px;
+    height: 220px;
+    background-color: #ecf0f1;
+    left: 30%;top: 11.5%;
+    border-radius: 10px;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardhtml .cardhtml{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.appdeveloper .maincardhtml .cardhtml:hover{
+    transform: rotateY(180deg);
+}
+
+.appdeveloper .maincardhtml .cardhtml .fronthtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: honeydew;
+    background-image: url("java.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+}
+.appdeveloper .maincardhtml .cardhtml .backhtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    
+} 
+                   /* andriod sdk */
+
+.appdeveloper .maincardcss{
+    position:absolute;
+    width: 220px;
+    height: 220px;
+    background-color: #ecf0f1;
+    left: 50%;top: 11.5%;
+    border-radius: 10px;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardcss .cardcss{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.appdeveloper .maincardcss .cardcss:hover{
+    transform: rotateY(180deg);
+}
+.appdeveloper .maincardcss .cardcss .frontcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("andriod.jpg");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+
+.appdeveloper .maincardcss .cardcss .backcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+                          /* xml */
+
+.appdeveloper .maincardjs{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("xml.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: cover;
+border-radius: 10px;
+}
+                
+.appdeveloper .maincardjs .cardjs .backjs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+                          /* apis */
+
+.appdeveloper .maincardbt{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("api.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+                
+.appdeveloper .maincardbt .cardbt .backbt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+                          /* jq */
+
+.appdeveloper .maincardjq{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+
+background-image: url("database.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardjq .cardjq .backjq{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+
+                       /* title of web cards */
+ .appdeveloper .apptitle{
+    position: absolute;
+    width: 29%;
+    height: 20%;
+    top:40%;left: 20px;
+    border-bottom: 0px solid #3742fa;
+}
+.apptitle .logodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;left: 1%;
+    font-size: 37px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+                                                                     /* Programming */
+
+
+.Programming{
+width: 100%;
+height: 75%;
+border-bottom: 1px solid  black;
+position: relative;
+top: 700px;
+}
+.Programming:hover{
+border-bottom: blue;
+box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+}
+
+.Programming .maincardhtml{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 30%;top: 11.5%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Programming .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Programming .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("java.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 10px;
+}
+.Programming .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 10px;
+
+} 
+                /* andriod sdk */
+
+.Programming .maincardcss{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 50%;top: 11.5%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("python.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+
+.Programming .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 10px;
+}
+
+                        /* xml */
+
+.Programming .maincardjs{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("cpp.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+            
+.Programming .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 10px;
+}
+                        /* apis */
+
+.Programming .maincardbt{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("go.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+            
+.Programming .maincardbt .cardbt .backbt{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 10px;
+}
+                        /* jq */
+
+.Programming .maincardjq{
+position:absolute;
+width: 220px;
+height: 220px;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+
+background-image: url("csharp.png.crdownload");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+            
+.Programming .maincardjq .cardjq .backjq{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 10px;
+}
+
+
+                    /* title of web cards */
+.Programming .progtitle{
+position: absolute;
+width: 29%;
+height: 27%;
+top:40%;left: 20px;
+border-bottom: 0px solid #3742fa;
+}
+.progtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 40%;left: 1%;
+font-size: 76px;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+                                                                           /* Framework */
+
+.Framework{
+width: 100%;
+height: 75%;
+border-bottom: 1px solid  black;
+position: relative;
+top: 700px;
+}
+.Framework:hover{
+border-bottom: blue;
+box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+}
+
+.Framework .maincardhtml{
+position:absolute;
+width: 320px;
+height: 380px;
+background-color: #ecf0f1;
+left: 32%;top: 22%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Framework .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Framework .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("spring.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+.Framework .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 10px;
+
+} 
+                /* andriod sdk */
+
+.Framework .maincardcss{
+position:absolute;
+width: 320px;
+height: 380px;
+background-color: #ecf0f1;
+left: 55%;top: 22%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("node.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+
+.Framework .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 10px;
+}
+
+                        /* xml */
+
+.Framework .maincardjs{
+position:absolute;
+width: 320px;
+height: 380px;
+background-color: #ecf0f1;
+left: 78%;top: 22%;
+border-radius: 10px;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("net.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+            
+.Framework .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 10px;
+}
+
+
+                    /* title of web cards */
+.Framework .frametitle{
+position: absolute;
+width: 29%;
+height: 27%;
+top:40%;left: 20px;
+border-bottom: 0px solid #3742fa;
+}
+.frametitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 40%;left: 5%;
+font-size: 80px;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+                                                    /* digital marketing and fashion design */
+
+.markfash{
+width: 100%;
+height: 76%;
+border-bottom: 1px solid  black;
+position: relative;
+top: 700px;
+}
+.markfash:hover{
+border-bottom: blue;
+box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+}
+
+.markfash .maincardhtml{
+position:absolute;
+width: 400px;
+height: 440px;
+background-color: #ecf0f1;
+left: 35%;top: 3%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.markfash .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.markfash .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("https://yourspost.com/wp-content/uploads/2020/10/digital-marketing.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 50%;
+}
+.markfash .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+
+} 
+                /* andriod sdk */
+
+.markfash .maincardcss{
+position:absolute;
+width: 400px;
+height: 440px;
+background-color: #ecf0f1;
+left: 70%;top: 3%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.markfash .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.markfash .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("fash.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 50%;
+}
+
+.markfash .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+}
+.dhead4{
+    position: absolute;
+    top: 60px;
+    left: 99px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.dpara{
+    position: absolute;
+    top: 130px;
+    left:20px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+}
+.dreadmore{
+    position: absolute;
+    top: 78%;
+    left: 35%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    animation: change 3s infinite;
+}
+.dreadmore:hover{
+    border: 3px solid;
+}
+
+ 
+
+
+                    /* title of web cards */
+.markfash .dmfdtitle{
+position: absolute;
+width: 29%;
+height: 27%;
+top:30%;left: 20px;
+border-bottom: 0px solid #3742fa;
+}
+.dmfdtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 70%;left: 5%;
+font-size: 25px;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+
+
+    
+                                                                             /* goals */
+.goals{
+    width: 100%;
+    height: 60%;
+    border-bottom: 1px solid;
+    background-color: #ecf0f1;
+    position: relative;
+    top: 90%;
+}
+.img1{
+    width: 174px;
+    height: 191px; 
+}
+
+.img2{
+    width: 174px;
+    height: 191px; 
+}
+.img3{
+    width: 174px;
+    height: 191px;  
+}
+.img4{
+    width: 174px;
+    height: 191px;  
+}
+.goal1{
+    position: absolute;
+    left: 15%;
+    top: 124px;
+    width: 174px;
+    height: 191px; 
+}
+.goal2{
+    position: absolute;
+    left: 35%;
+    top: 124px;
+    width: 174px;
+    height: 191px; 
+}
+.goal3{
+    position: absolute;
+    left: 56%;
+    top: 124px;
+    width: 174px;
+    height: 191px; 
+}
+.goal4{
+    position: absolute;
+    left: 77%;
+    top: 124px;
+    width: 174px;
+    height: 191px; 
+}
+
+.goals > h1{
+    position:absolute;
+    left:28vw;top:3%;
+    font-size:45px;
+    border:0px solid;
+    width:100%; 
+    border-bottom:0px solid #3742fa;
+  }
+  .goals:hover{
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+  }
+
+  .h41,.h42,.h43,.h44{
+    font-size:15px;
+    position:relative;
+    left:10px;
+  }
+
+  .h43{
+     left:46px;
+  }
+
+  .p1,.p2,.p3,.p4{
+     font-size:14px;
+  }
+
+
+
+
+  .footer{
+    width:100%;
+    position:absolute;
+    background:#3742fa;
+    padding: 15px 23px;
+    color: #fff;
+    top:93%;
+    text-align: center;
+    
+  }
+.footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+.footer span a:hover{
+    text-decoration: underline;
+}
+.bffooter{
+    width: 100%;
+    height: 60%;
+    border-top: 1px solid;
+    position:relative;
+    background-color:#ecf0f1;
+    top:85%;
+}
+.footlogo{
+    width:22%;
+    height:90%;
+    background-color:#ecf0f1;
+    position:relative;
+    border: 0px solid;
+    top:15px;
+    left:15px;
+  }
+  .footlogo img{
+    width:100px;
+  }
+  .footlogo > h1{
+    position:absolute;
+    top:22px;
+    left:90px;
+    color:#3742fa;
+    font-weight:bold;
+    font-size:45px;
+  }
+
+  .bffooter .footlogo i{
+    position:absolute;
+    left:30px;
+    font-size:30px;
+    padding:10px 5px 15px 0px;
+  }
+
+  .bffooter:hover{
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+  }
+
+  .bffooter .footlogo h4{
+    position:relative;
+    left:60px;
+    top:15px;
+  }
+  
+  .bffooter .footlogo a{
+    text-decoration:none;
+    background-color:#ecf0f1;
+    color:black;
+    position:relative;
+    left:60px;
+    top:15px;
+  }
+  .bffooter .footlogo a:hover{
+    color:#3742fa;
+  }
+
+  .social{
+    width:100%;
+    height:180px;
+    position:absolute;
+    top:59%;
+    border:0px solid;
+  }
+  .social > h2{
+    position:relative;
+    left:14%;
+    top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+.contribute{
+    width:62%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:80px;
+    left:350%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .contribute > li{
+    position:absolute;
+  }
+  
+  .contribute ul{
+    position:absolute;
+    top:40px;left:-40px;
+  }
+  .contribute ul li{
+    padding:0px 0px 10px 0px;
+  }
+  .contribute li{
+    font-size:15px;
+    padding-left:10px;
+  }
+
+  .practice{
+    width:62%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:80px;
+    left:290%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .practice > li{
+    position:absolute;
+  }
+  
+  .practice ul{
+    position:absolute;
+    top:40px;left:-40px;
+  }
+  .practice ul li{
+    padding:0px 0px 10px 0px;
+  }
+  .practice li{
+    font-size:15px;
+    padding-left:10px;
+  }
+
+  .learn{
+    width:62%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:80px;
+    left:210%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .learn > li{
+    position:absolute;
+  }
+  
+  .learn ul{
+    position:absolute;
+    top:40px;left:-40px;
+  }
+  .learn ul li{
+    padding:0px 0px 10px 0px;
+  }
+  .learn li{
+    font-size:15px;
+    padding-left:30px;
+  }
+
+
+
+
+  .company{
+    width:62%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:80px;
+    left:130%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .company > li{
+    position:absolute;
+  }
+  
+  .company ul{
+    position:absolute;
+    top:40px;left:-40px;
+  }
+  .company ul li{
+    padding:0px 0px 10px 0px;
+  }
+  .company li{
+    font-size:15px;
+    padding-left:10px;
+  }
+  
+.social li{
+  list-style:none;
+  padding:10px 40px 0px 0px;
+  display:inline-block;
+}
+
+.social > ul{
+  position:relative;
+  left:-30px;
+}
+
+
+
+.fa-facebook:hover{
+    color:#3b5998;
+  }
+  
+  .fa-linkedin:hover{
+    color:#0e76a8;
+  }
+  .fa-youtube:hover{
+    color:#FF0000;
+  }
+  .fa-twitter:hover{
+    color: #00acee;
+  }
+  .fa-instagram:hover{
+    color:#8a3ab9;
+  }
+  .fa-skype:hover{
+    color:#00aff0;
+  }
+
+
+
+
+
+
+
+    
+                                                                    /*#1 start 634 - 819px   responsive*/
+@media (min-width: 634px) and (max-width: 819px) {   
+
+    .box{width: 0.1%;
+        height: 0.1vh;
+    padding: 2rem;
+    margin: 0.4%;
+    position: absolute;
+    right: 45rem;
+   }
+
+   #logo{
+    border: 0px solid blue;
+    padding: 0%;
+    margin: -0.9rem 0px 0px 0px;
+    height: 8vh;
+    position: relative;
+    top: 0.7vh;
+    width: 6vw;
+   }
+
+
+   .logo-name{
+    border: 0px solid blue;
+    margin: 0px 2rem 0px 0px;padding: 0%;
+    position: relative;
+    right: 10px;
+    top: -2vh;
+    color: white;
+    font-size: 2rem;
+    
+    
+    }
+    #blog{
+    position: absolute;right: 1rem; top: 8rem;
+    font-size: 1.4rem;
+    }
+
+
+
+                           /* dropdown */
+    #menu {
+        border: 0px solid;
+    }
+    #menu > ul{
+        background-color:#6c5ce7;
+        top: 1rem;left: 1rem;
+    }
+
+    #menu ul{
+        list-style: none;
+        position: relative;padding: 0px;margin: 0px;float: left;
+
+    }
+    #menu a{
+        text-decoration: none;
+        line-height: 3.2rem;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: white;
+        padding: 0 1rem;
+        display: block;
+    }
+    #menu ul li{
+        position: relative;
+        float: left;
+    }
+    #menu ul ul{
+        position: absolute;
+        top: 100%;display: none;
+        /* border: 1px solid; */
+        
+    }
+    #menu ul ul li{
+        float: none;
+        width: 20rem;
+        background-color: #3498db;border-left: 0.3rem solid  #3498db;
+       
+    }
+    #menu ul ul ul{
+        left: 100%;
+        top: -1px;
+    }
+    #menu ul li:hover > ul{
+        display: block;
+    }
+    #menu ul ul li:hover{
+        background: #6c5ce7;
+    }
+    #menu ul ul li:hover{
+        border-left: 3px solid;
+    }
+
+
+
+    .imageslider{
+      
+        width: 100vw;
+        height: 50rem;
+        position: absolute;  
+        left: 50vw;
+        /* border: 1px solid; */
+        top: 57%;
+        background-image: url("front.jpg");
+        background-size: 100% 100%;
+        transform: translate(-50%,-50%);
+        animation: slide 10s infinite;
+        box-shadow:
+      0 0.3px 12.9px -47px rgba(0, 0, 0, 0.249),
+      0 0.8px 43.3px -47px rgba(0, 0, 0, 0.343),
+      0 14px 194px -47px rgba(0, 0, 0, 0.52)
+    ;
+        z-index: -1000;
+    }
+
+    .secondnav ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 1rem 0.4rem;
+    font-size: 1.3rem;
+    color: black;
+    
+    }
+
+    .secondnav ul{
+    display: flex;
+    margin: 0;
+    padding: 0px 0rem;
+
+    }
+
+
+
+
+                                   /* cards */
+
+                                                                              /* web developer */
+                            /* html */
+.webdeveloper{
+    width: 100%;
+    height: 75%;
+    border-bottom: 0.1rem solid  black;
+    position: relative;
+    top: 72rem;
+}
+.webdeveloper:hover{
+    border-bottom: blue;
+    box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.webdeveloper .maincardhtml{
+    position:absolute;
+    width: 12rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 30%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardhtml .cardhtml{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.webdeveloper .maincardhtml .cardhtml:hover{
+    transform: rotateY(180deg);
+}
+
+.webdeveloper .maincardhtml .cardhtml .fronthtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("html.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    border-radius: 1rem;
+}
+.webdeveloper .maincardhtml .cardhtml .backhtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+    
+} 
+.head4{
+    position: absolute;
+    top: 1rem;
+    left: 0.8rem;
+    font-size: 6px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.para{
+    position: absolute;
+    top: 20px;
+    left:1rem;
+    color: white;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+}
+.readmore{
+    position: absolute;
+    top: 67.9%;
+    left: 14.7%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    border-radius: 1.0rem;
+    /* box-shadow: -3px -4px 9px 0px; */
+    animation: change 3s infinite;
+}
+
+@keyframes change{
+    0%{border-bottom: 3px solid #7b4397;}
+    25%{border-bottom: 3px solid #7b4397;}
+    50%{border-bottom: 3px solid #7b4397;}
+    75%{border-bottom: 3px solid #7b4397;}
+}
+.readmore:hover{
+    border: 3px solid;
+}
+
+                   /* css */
+
+.webdeveloper .maincardcss{
+    position:absolute;
+    width: 12rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 50%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardcss .cardcss{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.webdeveloper .maincardcss .cardcss:hover{
+    transform: rotateY(180deg);
+}
+.webdeveloper .maincardcss .cardcss .frontcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("css.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+
+.webdeveloper .maincardcss .cardcss .backcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+                          /* js */
+
+.webdeveloper .maincardjs{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("js.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardjs .cardjs .backjs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* bt */
+
+.webdeveloper .maincardbt{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("bootstrap.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardbt .cardbt .backbt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* jq */
+
+.webdeveloper .maincardjq{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("jquery.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardjq .cardjq .backjq{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+
+                       /* title of web cards */
+.webtitle{
+    position: absolute;
+    width: 29%;
+    height: 20%;
+    top:25vh;left: 2rem;
+    /* order-bottom: 5px solid #3742fa; */
+}
+.webtitle .logodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;left: 1%;
+    font-size: 4vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+                                                                              /* app developer */
+
+.appdeveloper{
+    width: 100%;
+    height: 75%;
+    border-bottom: 0.1rem solid  black;
+    position: relative;
+    top: 71rem;
+}
+.appdeveloper:hover{
+    border-bottom: blue;
+    box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.appdeveloper .maincardhtml{
+    position:absolute;
+    width: 12rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 30%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardhtml .cardhtml{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.appdeveloper .maincardhtml .cardhtml:hover{
+    transform: rotateY(180deg);
+}
+
+.appdeveloper .maincardhtml .cardhtml .fronthtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: honeydew;
+    background-image: url("java.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 1rem;
+}
+.appdeveloper .maincardhtml .cardhtml .backhtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+    
+} 
+                   /* andriod sdk */
+
+.appdeveloper .maincardcss{
+    position:absolute;
+    width: 12rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 50%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardcss .cardcss{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.appdeveloper .maincardcss .cardcss:hover{
+    transform: rotateY(180deg);
+}
+.appdeveloper .maincardcss .cardcss .frontcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("andriod.jpg");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+
+.appdeveloper .maincardcss .cardcss .backcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+                          /* xml */
+
+.appdeveloper .maincardjs{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("xml.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardjs .cardjs .backjs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* apis */
+
+.appdeveloper .maincardbt{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("api.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardbt .cardbt .backbt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* jq */
+
+.appdeveloper .maincardjq{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+
+background-image: url("database.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardjq .cardjq .backjq{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+
+                       /* title of web cards */
+ .appdeveloper .apptitle{
+    position: absolute;
+    width: 29%;
+    height: 20%;
+    top:35%;left: 20px;
+    border-bottom: 0px solid #3742fa;
+}
+
+
+
+
+.apptitle .logodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;left: 1%;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+                                                                     /* Programming */
+
+
+.Programming{
+width: 100%;
+height: 75%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.Programming:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.Programming .maincardhtml{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 30%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Programming .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Programming .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("java.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 1rem;
+}
+.Programming .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+
+} 
+                /* andriod sdk */
+
+.Programming .maincardcss{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 50%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("python.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+
+.Programming .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+                        /* xml */
+
+.Programming .maincardjs{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("cpp.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+                        /* apis */
+
+.Programming .maincardbt{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("go.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardbt .cardbt .backbt{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+                        /* jq */
+
+.Programming .maincardjq{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+
+background-image: url("csharp.png.crdownload");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardjq .cardjq .backjq{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+
+                    /* title of web cards */
+.Programming .progtitle{
+position: absolute;
+width: 29%;
+height: 27%;
+top:40%;left: 20px;
+border: 0px solid;
+border-bottom: 0px solid #3742fa;
+}
+.progtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 10%;
+font-size: 4.1rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+                                                                           /* Framework */
+
+.Framework{
+width: 100%;
+height: 75%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.Framework:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.Framework .maincardhtml{
+position:absolute;
+width: 20rem;
+height: 25rem;                       
+background-color: #ecf0f1;
+left: 1%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Framework .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Framework .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("spring.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+.Framework .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+
+} 
+                /* andriod sdk */
+
+.Framework .maincardcss{
+position:absolute;
+width: 20rem;
+height: 25rem;  
+background-color: #ecf0f1;
+left: 34%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("node.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+
+.Framework .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+                        /* xml */
+
+.Framework .maincardjs{
+position:absolute;
+width: 20rem;
+height: 25rem; 
+background-color: #ecf0f1;
+left: 67%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("net.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Framework .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+
+                    /* title of web cards */
+.Framework .frametitle{
+position: absolute;
+width: 29%;
+height: 27%;
+border: 0px solid;
+top:-9%;left: 15%;
+border-bottom: 0px solid #3742fa;
+}
+.frametitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 40%;left: 5%;
+font-size: 8rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+                                                    /* digital marketing and fashion design */
+
+.markfash{
+width: 100%;
+height: 70%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.markfash:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.markfash .maincardhtml{
+position:absolute;
+width: 30rem;
+height: 30rem;
+background-color: #ecf0f1;
+left: 3%;top:15%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.markfash .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.markfash .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("https://yourspost.com/wp-content/uploads/2020/10/digital-marketing.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 50%;
+}
+.markfash .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+
+} 
+                /* andriod sdk */
+
+.markfash .maincardcss{
+position:absolute;
+width: 30rem;
+height: 30rem;
+background-color: #ecf0f1;
+left: 51%;top: 15%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.markfash .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.markfash .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("fash.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 50%;
+}
+
+.markfash .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+}
+.dhead4{
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.dpara{
+    position: absolute;
+    top: 109px;
+    left:27px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.dreadmore{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    animation: change 3s infinite;
+}
+.dreadmore:hover{
+    border: 3px solid;
+}
+
+ 
+
+
+                    /* title of web cards */
+.markfash .dmfdtitle{
+position: absolute;
+width: 80%;
+height: 27%;
+top:1%;left: 10%;
+border: 0px solid #3742fa;
+}
+.dmfdtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top:0%;left: 5%;
+font-size: 3rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+.goals{
+    width: 100%;
+    height: 65%;
+    border-bottom: 1px solid;
+    background-color: #ecf0f1;
+    position: relative;
+    top: 90%;
+}
+.img1{
+    width: 150px;
+    height: 151px; 
+}
+
+.img2{
+    width: 150px;
+    height: 151px;  
+}
+.img3{
+    width: 150px;
+    height: 151px;   
+}
+.img4{
+    width: 137px;
+    height: 151px;   
+}
+.goal1{
+    position: absolute;
+    left: 5%;
+    top: 100px;
+    width: 174px;
+    height: 191px; 
+}
+.goal2{
+    position: absolute;
+    left: 29%;
+    top: 100px;
+    width: 174px;
+    height: 191px; 
+}
+.goal3{
+    position: absolute;
+    left: 53%;
+    top: 100px;
+    width: 174px;
+    height: 191px; 
+}
+.goal4{
+    position: absolute;
+    left: 77%;
+    top: 100px;
+    width: 174px;
+    height: 191px; 
+}
+
+.goals > h1{
+    position:absolute;
+    left:9vw;top:3%;
+    font-size:35px;
+    border:0px solid;
+    width:100%; 
+    border-bottom:0px solid #3742fa;
+  }
+  .goals:hover{
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+  }
+
+  .h41,.h42,.h43,.h44{
+    font-size:13px;
+    position:relative;
+    left:10px;
+  }
+
+  .h43{
+     left:46px;
+  }
+
+  .p1,.p2,.p3,.p4{
+     font-size:16px;
+  }
+
+
+
+
+  .footlogo{
+    width:22%;
+    height:90%;
+    background-color:#ecf0f1;
+    position:relative;
+    border: 0px solid;
+    top:10px;
+    left:10px;
+  }
+  .footlogo img{
+    width:40px;
+    position:relative;
+    top:12px;
+  }
+  .footlogo > h1{
+    position:absolute;
+    top:21px;
+    left:45px;
+    color:black;
+    font-weight:bold;
+    font-size:17px;
+  }
+
+  .bffooter .footlogo i{
+    position:absolute;
+    left:20px;
+    font-size:30px;
+    padding:15px 5px 15px 0px;
+  }
+
+  .bffooter .footlogo .social ul li a i{
+    position:absolute;
+    left:5px;
+    font-size:20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
+  }
+
+  
+
+  .bffooter:hover{
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+  }
+
+  .bffooter .footlogo h4{
+    position:relative;
+    left:50px;
+    top:15px;
+    font-size: 13px;
+  }
+  
+  .bffooter .footlogo a{
+    text-decoration:none;
+    background-color:#ecf0f1;
+    color:black;
+    position:relative;
+    left:50px;
+    font-size: 15px;
+    top:23px;
+  }
+  .bffooter .footlogo a:hover{
+    color:#3742fa;
+  }
+
+  .social{
+    width:200%;
+    height:180px;
+    position:absolute;
+    top:59%;
+    border:0px solid;
+  }
+  .social > h2{
+    position:relative;
+    left:10%;
+    top:10px;
+    font-size:15px;
+}
+
+
+.contribute{
+    width:62%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:80px;
+    left:353%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .contribute > li{
+    position:absolute;
+  }
+  
+  .contribute ul{
+    position:absolute;
+    top:40px;left:-36px;
+  }
+  .contribute ul li{
+    padding:0px 0px 8px 5px;
+    font-size: 2px;
+  }
+  .contribute li{
+    font-size:14px;
+    padding-left:13px;
+  }
+
+  .practice{
+    width:62%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:80px;
+    left:290%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .practice > li{
+    position:absolute;
+  }
+  
+  .practice ul{
+    position:absolute;
+    top:40px;left:-40px;
+  }
+  .practice ul li{
+    padding:0px 0px 10px 0px;
+    font-size: 10px;
+  }
+
+  .practice li{
+    font-size:15px;
+    padding-left:10px;
+  }
+
+  .learn{
+    width:62%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:80px;
+    left:210%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .learn > li{
+    position:absolute;
+  }
+  
+  .learn ul{
+    position:absolute;
+    top:40px;left:-40px;
+  }
+  .learn ul li{
+    padding:0px 0px 10px 0px;
+  }
+  .learn li{
+    font-size:15px;
+    padding-left:30px;
+  }
+
+
+
+
+  .company{
+    width:62%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:80px;
+    left:130%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .company > li{
+    position:absolute;
+  }
+  
+  .company ul{
+    position:absolute;
+    top:40px;left:-40px;
+  }
+  .company ul li{
+    padding:0px 0px 10px 0px;
+  }
+  .company li{
+    font-size:15px;
+    padding-left:10px;
+  }
+
+
+
+
+
+
+
+}                                                                /*#1 close 634 - 819px   responsive*/
+                                                               
+
+                                                               /*#2 start 819 - 1000px*/
+
+@media (min-width:819px) and (max-width:1000px) {
+    .secondnav ul{
+    display: flex;
+    margin: 0;
+    padding: 0px 0rem;
+    }
+
+    .secondnav ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    border: 0px solid ;
+    }
+
+  
+                               /* cards */
+
+                                                                              /* web developer */
+                            /* html */
+.webdeveloper{
+    width: 100%;
+    height: 75%;
+    border-bottom: 0.1rem solid  black;
+    position: relative;
+    top: 72rem;
+}
+.webdeveloper:hover{
+    border-bottom: blue;
+    box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.webdeveloper .maincardhtml{
+    position:absolute;
+    width: 15rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 30%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardhtml .cardhtml{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.webdeveloper .maincardhtml .cardhtml:hover{
+    transform: rotateY(180deg);
+}
+
+.webdeveloper .maincardhtml .cardhtml .fronthtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("html.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    border-radius: 1rem;
+}
+.webdeveloper .maincardhtml .cardhtml .backhtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+    
+} 
+.head4{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 8px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.para{
+    position: absolute;
+    top: 25px;
+    left:1rem;
+    color: white;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+.readmore{
+    position: absolute;
+    top: 67.9%;
+    left: 14.7%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    border-radius: 1.0rem;
+    /* box-shadow: -3px -4px 9px 0px; */
+    animation: change 3s infinite;
+}
+
+@keyframes change{
+    0%{border-bottom: 3px solid #7b4397;}
+    25%{border-bottom: 3px solid #7b4397;}
+    50%{border-bottom: 3px solid #7b4397;}
+    75%{border-bottom: 3px solid #7b4397;}
+}
+.readmore:hover{
+    border: 3px solid;
+}
+
+                   /* css */
+
+.webdeveloper .maincardcss{
+    position:absolute;
+    width: 15rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 50%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardcss .cardcss{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.webdeveloper .maincardcss .cardcss:hover{
+    transform: rotateY(180deg);
+}
+.webdeveloper .maincardcss .cardcss .frontcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("css.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+
+.webdeveloper .maincardcss .cardcss .backcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+                          /* js */
+
+.webdeveloper .maincardjs{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("js.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardjs .cardjs .backjs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* bt */
+
+.webdeveloper .maincardbt{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("bootstrap.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardbt .cardbt .backbt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* jq */
+
+.webdeveloper .maincardjq{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("jquery.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardjq .cardjq .backjq{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+
+                       /* title of web cards */
+.webtitle{
+    position: absolute;
+    width: 29%;
+    height: 20%;
+    top:20vh;left: 2rem;
+    /* order-bottom: 5px solid #3742fa; */
+}
+.webtitle .logodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;left: 1%;
+    font-size: 4vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+                                                                              /* app developer */
+
+.appdeveloper{
+    width: 100%;
+    height: 75%;
+    border-bottom: 0.1rem solid  black;
+    position: relative;
+    top: 71rem;
+}
+.appdeveloper:hover{
+    border-bottom: blue;
+    box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.appdeveloper .maincardhtml{
+    position:absolute;
+    width: 15rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 30%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardhtml .cardhtml{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.appdeveloper .maincardhtml .cardhtml:hover{
+    transform: rotateY(180deg);
+}
+
+.appdeveloper .maincardhtml .cardhtml .fronthtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: honeydew;
+    background-image: url("java.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 1rem;
+}
+.appdeveloper .maincardhtml .cardhtml .backhtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+    
+} 
+                   /* andriod sdk */
+
+.appdeveloper .maincardcss{
+    position:absolute;
+    width: 15rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 50%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardcss .cardcss{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.appdeveloper .maincardcss .cardcss:hover{
+    transform: rotateY(180deg);
+}
+.appdeveloper .maincardcss .cardcss .frontcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("andriod.jpg");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+
+.appdeveloper .maincardcss .cardcss .backcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+                          /* xml */
+
+.appdeveloper .maincardjs{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("xml.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardjs .cardjs .backjs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* apis */
+
+.appdeveloper .maincardbt{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("api.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardbt .cardbt .backbt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* jq */
+
+.appdeveloper .maincardjq{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+
+background-image: url("database.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardjq .cardjq .backjq{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+
+                       /* title of web cards */
+ .appdeveloper .apptitle{
+    position: absolute;
+    width: 29%;
+    height: 20%;
+    top:30%;left: 20px;
+    border-bottom: 0px solid #3742fa;
+}
+
+
+
+
+.apptitle .logodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;left: 1%;
+    font-size: 37px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+                                                                     /* Programming */
+
+
+.Programming{
+width: 100%;
+height: 75%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.Programming:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.Programming .maincardhtml{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 30%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Programming .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Programming .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("java.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 1rem;
+}
+.Programming .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+
+} 
+                /* andriod sdk */
+
+.Programming .maincardcss{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 50%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("python.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+
+.Programming .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+                        /* xml */
+
+.Programming .maincardjs{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("cpp.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+                        /* apis */
+
+.Programming .maincardbt{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("go.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardbt .cardbt .backbt{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+                        /* jq */
+
+.Programming .maincardjq{
+position:absolute;
+width: 15rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+
+background-image: url("csharp.png.crdownload");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardjq .cardjq .backjq{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+
+                    /* title of web cards */
+.Programming .progtitle{
+position: absolute;
+width: 29%;
+height: 27%;
+top:40%;left: 20px;
+border: 0px solid;
+border-bottom: 0px solid #3742fa;
+}
+.progtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 10%;
+font-size: 4.3rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+                                                                           /* Framework */
+
+.Framework{
+width: 100%;
+height: 75%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.Framework:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.Framework .maincardhtml{
+position:absolute;
+width: 23rem;
+height: 25rem;                       
+background-color: #ecf0f1;
+left: 10%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Framework .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Framework .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("spring.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+.Framework .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+
+} 
+                /* andriod sdk */
+
+.Framework .maincardcss{
+position:absolute;
+width: 23rem;
+height: 25rem;  
+background-color: #ecf0f1;
+left: 40%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("node.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+
+.Framework .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+                        /* xml */
+
+.Framework .maincardjs{
+position:absolute;
+width: 23rem;
+height: 25rem; 
+background-color: #ecf0f1;
+left: 70%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("net.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Framework .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+
+                    /* title of web cards */
+.Framework .frametitle{
+position: absolute;
+width: 29%;
+height: 27%;
+border: 0px solid;
+top:-9%;left: 30%;
+border-bottom: 0px solid #3742fa;
+}
+.frametitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 40%;left: 5%;
+font-size: 8rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+                                                    /* digital marketing and fashion design */
+
+.markfash{
+width: 100%;
+height: 82%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.markfash:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.markfash .maincardhtml{
+position:absolute;
+width: 38rem;
+height: 38rem;
+background-color: #ecf0f1;
+left: 3%;top:15%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.markfash .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.markfash .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("https://yourspost.com/wp-content/uploads/2020/10/digital-marketing.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 50%;
+}
+.markfash .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+
+} 
+                /* andriod sdk */
+
+.markfash .maincardcss{
+position:absolute;
+width: 38rem;
+height: 38rem;
+background-color: #ecf0f1;
+left: 51%;top: 15%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.markfash .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.markfash .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("fash.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 50%;
+}
+
+.markfash .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+}
+.dhead4{
+    position: absolute;
+    top: 70px;
+    left: 90px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.dpara{
+    position: absolute;
+    top: 130px;
+    left:27px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.dreadmore{
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    animation: change 3s infinite;
+}
+.dreadmore:hover{
+    border: 3px solid;
+}
+
+ 
+
+
+                    /* title of web cards */
+.markfash .dmfdtitle{
+position: absolute;
+width: 59%;
+height: 27%;
+top:1%;left: 19%;
+border: 0px solid #3742fa;
+}
+.dmfdtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top:0%;left: 5%;
+font-size: 3rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+    
+                                                                             /* goals */
+.goals{
+    width: 100%;
+    height: 65%;
+    border-bottom: 1px solid;
+    background-color: #ecf0f1;
+    position: relative;
+    top: 90%;
+}
+.img1{
+    width: 174px;
+    height: 191px; 
+}
+
+.img2{
+    width: 174px;
+    height: 191px; 
+}
+.img3{
+    width: 174px;
+    height: 191px;  
+}
+.img4{
+    width: 174px;
+    height: 191px;  
+}
+.goal1{
+    position: absolute;
+    left: 5%;
+    top: 124px;
+    width: 174px;
+    height: 191px; 
+}
+.goal2{
+    position: absolute;
+    left: 29%;
+    top: 124px;
+    width: 174px;
+    height: 191px; 
+}
+.goal3{
+    position: absolute;
+    left: 53%;
+    top: 124px;
+    width: 174px;
+    height: 191px; 
+}
+.goal4{
+    position: absolute;
+    left: 77%;
+    top: 124px;
+    width: 174px;
+    height: 191px; 
+}
+
+.goals > h1{
+    position:absolute;
+    left:15vw;top:3%;
+    font-size:40px;
+    border:0px solid;
+    width:100%; 
+    border-bottom:0px solid #3742fa;
+  }
+  .goals:hover{
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+  }
+
+  .h41,.h42,.h43,.h44{
+    font-size:15px;
+    position:relative;
+    left:10px;
+  }
+
+  .h43{
+     left:46px;
+  }
+
+  .p1,.p2,.p3,.p4{
+     font-size:14px;
+  }
+
+
+
+
+.footlogo{
+    width:22%;
+    height:90%;
+    background-color:#ecf0f1;
+    position:relative;
+    border: 0px solid;
+    top:10px;
+    left:10px;
+  }
+  .footlogo img{
+    width:50px;
+    position:relative;
+    top:12px;
+  }
+  .footlogo > h1{
+    position:absolute;
+    top:25px;
+    left:51px;
+    color:black;
+    font-weight:bold;
+    font-size:20px;
+  }
+
+  .bffooter .footlogo i{
+    position:absolute;
+    left:20px;
+    font-size:30px;
+    padding:15px 5px 15px 0px;
+  }
+
+  .bffooter .footlogo .social ul li a i{
+    position:absolute;
+    left:5px;
+    font-size:20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
+  }
+
+  
+
+  .bffooter:hover{
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+  }
+
+  .bffooter .footlogo h4{
+    position:relative;
+    left:50px;
+    top:15px;
+    font-size: 13px;
+  }
+  
+  .bffooter .footlogo a{
+    text-decoration:none;
+    background-color:#ecf0f1;
+    color:black;
+    position:relative;
+    left:50px;
+    font-size: 15px;
+    top:23px;
+  }
+  .bffooter .footlogo a:hover{
+    color:#3742fa;
+  }
+
+  .social{
+    width:200%;
+    height:180px;
+    position:absolute;
+    top:59%;
+    border:0px solid;
+  }
+  .social > h2{
+    position:relative;
+    left:10%;
+    top:10px;
+    font-size:15px;
+}
+
+
+
+
+
+
+
+}                                                                
+                                                              /*#2 close 819 - 1000px*/
+
+
+
+
+
+.box > i{
+    font-size: 1.5rem;color: blue;
+}
+.box > input{
+    flex: 1;
+    height: 4rem;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    padding-left: 1rem;
+}
+                                                                          /*#3 start  450 - 634px*/
+@media only screen and (max-width: 634px) {                           
+    
+   .box{
+    border: 0px solid blue;
+    width: 25vw;
+    height: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    position: absolute;
+    right: 21rem;
+    top: 0.9rem;
+    }
+
+    .box > i{
+    font-size: 1.5rem;color: blue;
+    }
+    .box > input{
+        flex: 1;
+        height: 4rem;
+        width: 0vw;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+    #menu a{
+        
+        font-size: 1.1rem;
+     
+        padding: 0 1rem;
+       
+    }
+
+
+   #logo{
+    border: 0px solid blue;
+    padding: 0%;
+    margin: -0.9rem 0px 0px 0px;
+    height: 8vh;
+    position: relative;
+    top: 0.7vh;
+    width: 6vw;
+   }
+
+
+   .logo-name{
+    border: 0px solid blue;
+    margin: 0px 2rem 0px 0px;padding: 0%;
+    position: relative;
+    right: 10px;
+    top: -2vh;
+    color: white;
+    font-size: 2rem;
+    
+    
+    }
+
+
+
+    #reg{
+        text-decoration: none;
+        position: absolute;
+        color: black;
+        font-size: 1.7rem;
+        right: 2%;
+        top: 1.5rem;
+        border: 0px solid black;
+        border-radius: 0px;
+        padding: 0.5rem 1%;
+    }
+    #reg:hover{
+        box-shadow: 0.1rem 0.2rem 1.5rem 0.3rem rgba(22, 6, 238, 0.822);
+        color: white;
+    }
+    #regin{
+        text-decoration: none;
+        position: absolute;
+        color: black;
+        font-size: 1.7rem;
+        right: 11rem;
+        top: 1.5rem;
+        border: 0px solid black;
+        padding: 0.5vh 1%;
+        
+    }
+
+    #regin:hover{
+        box-shadow: 0.1rem 0.2rem 1.5rem 0.3rem rgba(22, 6, 238, 0.822);
+        color: white;
+        
+    }
+
+    #blog{
+    position: absolute;right: 1rem; top: 9.5rem;
+    font-size: 1.4rem;
+    }
+
+
+    .imageslider{
+      
+        max-width: 150%;
+        height: 50rem;
+        position: absolute;  
+        left: 50vw;
+        /* border: 1px solid; */
+        top: 57%;
+        background-image: url("front.jpg");
+        background-size: 100% 100%;
+        transform: translate(-50%,-50%);
+        animation: slide 10s infinite;
+        box-shadow:
+      0 0.3px 12.9px -47px rgba(0, 0, 0, 0.249),
+      0 0.8px 43.3px -47px rgba(0, 0, 0, 0.343),
+      0 14px 194px -47px rgba(0, 0, 0, 0.52)
+    ;
+        z-index: -1000;
+    }
+
+
+    .secondnav ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 1rem 0.2rem;
+    font-size: 1.3rem;
+    color: black;
+    border: 0px solid ;
+    }
+
+
+    .secondnav ul{
+    display: flex;
+    margin: 0;
+    padding: 0px 0px;
+    }
+
+
+
+
+                                   /* cards */
+
+                                                                              /* web developer */
+                            /* html */
+.webdeveloper{
+    width: 100%;
+    height: 75%;
+    border-bottom: 0.1rem solid  black;
+    position: relative;
+    top: 72rem;
+}
+.webdeveloper:hover{
+    border-bottom: blue;
+    box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.webdeveloper .maincardhtml{
+    position:absolute;
+    width: 12rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 8%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardhtml .cardhtml{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.webdeveloper .maincardhtml .cardhtml:hover{
+    transform: rotateY(180deg);
+}
+
+.webdeveloper .maincardhtml .cardhtml .fronthtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("html.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    border-radius: 1rem;
+}
+.webdeveloper .maincardhtml .cardhtml .backhtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+    
+} 
+.head4{
+    position: absolute;
+    top: 1rem;
+    left: 0.8rem;
+    font-size: 6px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.para{
+    position: absolute;
+    top: 20px;
+    left:1rem;
+    color: white;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+}
+.readmore{
+    position: absolute;
+    top: 67.9%;
+    left: 14.7%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    border-radius: 1.0rem;
+    /* box-shadow: -3px -4px 9px 0px; */
+    animation: change 3s infinite;
+}
+
+@keyframes change{
+    0%{border-bottom: 3px solid #7b4397;}
+    25%{border-bottom: 3px solid #7b4397;}
+    50%{border-bottom: 3px solid #7b4397;}
+    75%{border-bottom: 3px solid #7b4397;}
+}
+.readmore:hover{
+    border: 3px solid;
+}
+
+                   /* css */
+
+.webdeveloper .maincardcss{
+    position:absolute;
+    width: 12rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 40%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardcss .cardcss{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.webdeveloper .maincardcss .cardcss:hover{
+    transform: rotateY(180deg);
+}
+.webdeveloper .maincardcss .cardcss .frontcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("css.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+
+.webdeveloper .maincardcss .cardcss .backcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+                          /* js */
+
+.webdeveloper .maincardjs{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("js.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardjs .cardjs .backjs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* bt */
+
+.webdeveloper .maincardbt{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 20%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("bootstrap.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardbt .cardbt .backbt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* jq */
+
+.webdeveloper .maincardjq{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("jquery.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardjq .cardjq .backjq{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+
+                       /* title of web cards */
+.webtitle{
+    position: absolute;
+    width: 70%;
+    height: 20%;
+    top:-20px;left: 9rem;
+    /* order-bottom: 5px solid #3742fa; */
+}
+.webtitle .logodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 30%;left: 1%;
+    font-size: 5vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+                                                                              /* app developer */
+
+.appdeveloper{
+    width: 100%;
+    height: 75%;
+    border-bottom: 0.1rem solid  black;
+    position: relative;
+    top: 71rem;
+}
+.appdeveloper:hover{
+    border-bottom: blue;
+    box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.appdeveloper .maincardhtml{
+    position:absolute;
+    width: 12rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 8%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardhtml .cardhtml{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.appdeveloper .maincardhtml .cardhtml:hover{
+    transform: rotateY(180deg);
+}
+
+.appdeveloper .maincardhtml .cardhtml .fronthtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: honeydew;
+    background-image: url("java.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 1rem;
+}
+.appdeveloper .maincardhtml .cardhtml .backhtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+    
+} 
+                   /* andriod sdk */
+
+.appdeveloper .maincardcss{
+    position:absolute;
+    width: 12rem;
+    height: 17rem;
+    background-color: #ecf0f1;
+    left: 40%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardcss .cardcss{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.appdeveloper .maincardcss .cardcss:hover{
+    transform: rotateY(180deg);
+}
+.appdeveloper .maincardcss .cardcss .frontcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("andriod.jpg");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+
+.appdeveloper .maincardcss .cardcss .backcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+                          /* xml */
+
+.appdeveloper .maincardjs{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("xml.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardjs .cardjs .backjs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* apis */
+
+.appdeveloper .maincardbt{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 20%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("api.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardbt .cardbt .backbt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* jq */
+
+.appdeveloper .maincardjq{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+
+background-image: url("database.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardjq .cardjq .backjq{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+
+                       /* title of web cards */
+ .appdeveloper .apptitle{
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    top:0%;left: 20px;
+    border-bottom: 0px solid #3742fa;
+}
+
+
+
+
+.apptitle .logodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10%;left: 1%;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+                                                                     /* Programming */
+
+
+.Programming{
+width: 100%;
+height: 75%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.Programming:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.Programming .maincardhtml{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 8%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Programming .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Programming .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("java.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 1rem;
+}
+.Programming .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+
+} 
+                /* andriod sdk */
+
+.Programming .maincardcss{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 40%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("python.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+
+.Programming .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+                        /* xml */
+
+.Programming .maincardjs{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("cpp.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+                        /* apis */
+
+.Programming .maincardbt{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 20%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("go.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardbt .cardbt .backbt{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+                        /* jq */
+
+.Programming .maincardjq{
+position:absolute;
+width: 12rem;
+height: 17rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+
+background-image: url("csharp.png.crdownload");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardjq .cardjq .backjq{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+
+                    /* title of web cards */
+.Programming .progtitle{
+position: absolute;
+width: 29%;
+height: 27%;
+top:0%;left: 110px;
+border: 0px solid;
+border-bottom: 0px solid #3742fa;
+}
+.progtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 4%;
+font-size: 4.1rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+                                                                           /* Framework */
+
+.Framework{
+width: 100%;
+height: 90%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.Framework:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.Framework .maincardhtml{
+position:absolute;
+width: 20rem;
+height: 25rem;                       
+background-color: #ecf0f1;
+left: 5%;top: 20%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Framework .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Framework .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("spring.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+.Framework .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+
+} 
+                /* andriod sdk */
+
+.Framework .maincardcss{
+position:absolute;
+width: 20rem;
+height: 25rem;  
+background-color: #ecf0f1;
+left: 52%;top: 20%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("node.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+
+.Framework .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+                        /* xml */
+
+.Framework .maincardjs{
+position:absolute;
+width: 30rem;
+height: 23rem; 
+background-color: #ecf0f1;
+left: 17%;top: 62%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("net.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Framework .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+
+                    /* title of web cards */
+.Framework .frametitle{
+position: absolute;
+width: 29%;
+height: 27%;
+border: 0px solid;
+top:-9%;left: 15%;
+border-bottom: 0px solid #3742fa;
+}
+.frametitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 50%;left: 30%;
+font-size: 4.1rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+                                                    /* digital marketing and fashion design */
+
+.markfash{
+width: 100%;
+height: 120%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.markfash:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.markfash .maincardhtml{
+position:absolute;
+width: 31rem;
+height: 31rem;
+background-color: #ecf0f1;
+left: 16%;top:10%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.markfash .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.markfash .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("https://yourspost.com/wp-content/uploads/2020/10/digital-marketing.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 50%;
+}
+.markfash .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+
+} 
+                /* andriod sdk */
+
+.markfash .maincardcss{
+position:absolute;
+width: 31rem;
+height: 31rem;
+background-color: #ecf0f1;
+left: 16%;top: 50%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.markfash .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.markfash .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("fash.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 50%;
+}
+
+.markfash .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+}
+.dhead4{
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.dpara{
+    position: absolute;
+    top: 109px;
+    left:27px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.dreadmore{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    animation: change 3s infinite;
+}
+.dreadmore:hover{
+    border: 3px solid;
+}
+
+ 
+
+
+                    /* title of web cards */
+.markfash .dmfdtitle{
+position: absolute;
+width: 100%;
+height: 27%;
+top:1%;left: 0%;
+border: 0px solid #3742fa;
+}
+.dmfdtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top:0%;left: 4%;
+font-size: 2.8rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+.goals{
+    width: 100%;
+    height: 65%;
+    border-bottom: 1px solid;
+    background-color: #ecf0f1;
+    position: relative;
+    top: 90%;
+}
+.img1{
+    width: 110px;
+    height: 111px; 
+}
+
+.img2{
+    width: 110px;
+    height: 111px;   
+}
+.img3{
+    width: 110px;
+    height: 111px; 
+    position: relative;
+    right:14px;    
+}
+.img4{
+    width: 110px;
+    height: 111px;
+    position: relative;
+    right:14px;    
+}
+.goal1{
+    position: absolute;
+    left: 5%;
+    top: 100px;
+    width: 114px;
+    height: 191px; 
+    padding:15px;
+}
+.goal2{
+    position: absolute;
+    left: 29%;
+    top: 100px;
+    width: 114px;
+    height: 191px; 
+    padding:15px;
+}
+.goal3{
+    position: absolute;
+    left: 53%;
+    top: 100px;
+    width: 114px;
+    height: 191px; 
+    padding:15px;
+}
+.goal4{
+    position: absolute;
+    left: 77%;
+    top: 100px;
+    width: 114px;
+    height: 191px; 
+    padding:15px;
+}
+
+.goals > h1{
+    position:absolute;
+    left:7vw;top:5%;
+    font-size:25px;
+    border:0px solid;
+    width:100%; 
+    border-bottom:0px solid #3742fa;
+  }
+  .goals:hover{
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+  }
+
+  .h41,.h42,.h43,.h44{
+    font-size:8px;
+    position:relative;
+    left:-19px;
+  }
+
+  .h43,.h41,.h42{
+     left:14px;
+  }
+
+  .p1,.p2,.p3,.p4{
+     font-size:10px;
+
+  }
+
+
+
+
+
+
+  .footlogo{
+    width:22%;
+    height:90%;
+    background-color:#ecf0f1;
+    position:relative;
+    border: 0px solid;
+    top:10px;
+    left:10px;
+  }
+  .footlogo img{
+    width:30px;
+    position:relative;
+    top:12px;
+  }
+  .footlogo > h1{
+    position:absolute;
+    top:20px;
+    left:35px;
+    color:black;
+    font-weight:bold;
+    font-size:11px;
+  }
+
+  .bffooter .footlogo i{
+    position:absolute;
+    left:10px;
+    font-size:20px;
+    padding:15px 5px 15px 0px;
+  }
+
+  .bffooter .footlogo .social ul li a i{
+    position:absolute;
+    left:5px;
+    font-size:20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
+  }
+
+  
+
+  .bffooter:hover{
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+  }
+
+  .bffooter .footlogo h4{
+    position:relative;
+    left:50px;
+    top:15px;
+    font-size: 10px;
+  }
+  
+  .bffooter .footlogo a{
+    text-decoration:none;
+    background-color:#ecf0f1;
+    color:black;
+    position:relative;
+    left:30px;
+    font-size: 12px;
+    top:20px;
+  }
+  .bffooter .footlogo a:hover{
+    color:#3742fa;
+  }
+
+  .social{
+    width:400%;
+    height:180px;
+    position:absolute;
+    top:76%;
+    border:0px solid;
+  }
+  .social > h2{
+    position:relative;
+    left:4%;
+    top:10px;
+    font-size:15px;
+}
+
+
+.contribute{
+    width:100%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:110px;
+    left:55%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .contribute > li{
+    position:absolute;
+    left:20px;
+
+  }
+  
+  .contribute ul{
+    position:absolute;
+    top:10px;left:-0.5px;
+  }
+  .contribute ul li{
+    padding:0px 0px 8px 5px;
+    font-size: 5px;
+  }
+  .contribute li{
+    font-size:12px;
+    padding-left:13px;
+  }
+
+  .practice{
+    width:80%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:0px;
+    left:320%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .practice > li{
+    position:absolute;
+  }
+  
+  .practice ul{
+    position:absolute;
+    top:10px;left:-20px;
+  }
+  .practice ul li{
+    padding:0px 0px 10px 0px;
+    font-size: 5px;
+  }
+
+  .practice li{
+    font-size:12px;
+    padding-left:10px;
+  }
+
+  .learn{
+    width:80%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:110px;
+    left:310%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .learn > li{
+    position:absolute;
+
+  }
+  
+  .learn ul{
+    position:absolute;
+    top:10px;left:-10px;
+  }
+  .learn ul li{
+    padding:0px 0px 10px 0px;
+    font-size:5px;
+  }
+  .learn li{
+    font-size:12px;
+    padding-left:30px;
+  }
+
+
+
+
+  .company{
+    width:62%;
+    height:53%;
+    border:0px solid;
+    position:absolute;
+    top:90px;
+    left:230%;
+  }
+  
+  li{
+    list-style:none;
+  }
+  
+  .company > li{
+    position:absolute;
+    top:20px;right:6px;
+  }
+  
+  .company ul{
+    position:absolute;
+    top:30px;left:-40px;
+  }
+  .company ul li{
+    padding:0px 0px 10px 0px;
+    font-size:5px;
+  }
+  .company li{
+    font-size:12px;
+    
+  }
+
+
+
+
+
+
+
+
+}                                 
+                                                                    /*#3 close  450 - 634px*/
+
+
+
+                                                                    /*#4 start  1000 - 1180px*/
+
+ @media (min-width: 1000px) and (max-width: 1180px){
+     
+ 
+                            /* cards */
+
+                                                                              /* web developer */
+                            /* html */
+.webdeveloper{
+    width: 100%;
+    height: 75%;
+    border-bottom: 0.1rem solid  black;
+    position: relative;
+    top: 72rem;
+}
+.webdeveloper:hover{
+    border-bottom: blue;
+    box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.webdeveloper .maincardhtml{
+    position:absolute;
+    width: 19rem;
+    height: 20rem;
+    background-color: #ecf0f1;
+    left: 30%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardhtml .cardhtml{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.webdeveloper .maincardhtml .cardhtml:hover{
+    transform: rotateY(180deg);
+}
+
+.webdeveloper .maincardhtml .cardhtml .fronthtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("html.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+.webdeveloper .maincardhtml .cardhtml .backhtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+    
+} 
+.head4{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.para{
+    position: absolute;
+    top: 2.9rem;
+    left:1rem;
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.readmore{
+    position: absolute;
+    top: 68.9%;
+    left: 45.7%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    border-radius: 1.0rem;
+    /* box-shadow: -3px -4px 9px 0px; */
+    animation: change 3s infinite;
+}
+
+@keyframes change{
+    0%{border-top: 3px solid #7b4397;}
+    25%{border-right: 3px solid #7b4397;}
+    50%{border-bottom: 3px solid #7b4397;}
+    75%{border-left: 3px solid #7b4397;}
+}
+.readmore:hover{
+    border: 3px solid;
+}
+
+                   /* css */
+
+.webdeveloper .maincardcss{
+    position:absolute;
+    width: 19rem;
+    height: 20rem;
+    background-color: #ecf0f1;
+    left: 50%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardcss .cardcss{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.webdeveloper .maincardcss .cardcss:hover{
+    transform: rotateY(180deg);
+}
+.webdeveloper .maincardcss .cardcss .frontcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("css.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+
+.webdeveloper .maincardcss .cardcss .backcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+                          /* js */
+
+.webdeveloper .maincardjs{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("js.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardjs .cardjs .backjs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* bt */
+
+.webdeveloper .maincardbt{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("bootstrap.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardbt .cardbt .backbt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* jq */
+
+.webdeveloper .maincardjq{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.webdeveloper .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.webdeveloper .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.webdeveloper .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("jquery.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.webdeveloper .maincardjq .cardjq .backjq{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+
+                       /* title of web cards */
+.webtitle{
+    position: absolute;
+    width: 29%;
+    height: 20%;
+    top:20vh;left: 2rem;
+    /* order-bottom: 5px solid #3742fa; */
+}
+.webtitle .logodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;left: 1%;
+    font-size: 4vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+                                                                              /* app developer */
+
+.appdeveloper{
+    width: 100%;
+    height: 75%;
+    border-bottom: 0.1rem solid  black;
+    position: relative;
+    top: 71rem;
+}
+.appdeveloper:hover{
+    border-bottom: blue;
+    box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.appdeveloper .maincardhtml{
+    position:absolute;
+    width: 19rem;
+    height: 20rem;
+    background-color: #ecf0f1;
+    left: 30%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardhtml .cardhtml{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.appdeveloper .maincardhtml .cardhtml:hover{
+    transform: rotateY(180deg);
+}
+
+.appdeveloper .maincardhtml .cardhtml .fronthtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: honeydew;
+    background-image: url("java.png");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 1rem;
+}
+.appdeveloper .maincardhtml .cardhtml .backhtml{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+    
+} 
+                   /* andriod sdk */
+
+.appdeveloper .maincardcss{
+    position:absolute;
+    width: 19rem;
+    height: 20rem;
+    background-color: #ecf0f1;
+    left: 50%;top: 11.5%;
+    border-radius: 1rem;
+    box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardcss .cardcss{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.appdeveloper .maincardcss .cardcss:hover{
+    transform: rotateY(180deg);
+}
+.appdeveloper .maincardcss .cardcss .frontcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("andriod.jpg");
+    /* background-color: #5352ed; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+
+.appdeveloper .maincardcss .cardcss .backcss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+                          /* xml */
+
+.appdeveloper .maincardjs{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("xml.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardjs .cardjs .backjs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* apis */
+
+.appdeveloper .maincardbt{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("api.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardbt .cardbt .backbt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+                          /* jq */
+
+.appdeveloper .maincardjq{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.appdeveloper .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.appdeveloper .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.appdeveloper .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+
+background-image: url("database.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+                
+.appdeveloper .maincardjq .cardjq .backjq{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e90ff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+}
+
+
+                       /* title of web cards */
+ .appdeveloper .apptitle{
+    position: absolute;
+    width: 29%;
+    height: 20%;
+    top:30%;left: 20px;
+    border-bottom: 0px solid #3742fa;
+}
+
+
+
+
+.apptitle .logodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;left: 1%;
+    font-size: 37px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+                                                                     /* Programming */
+
+
+.Programming{
+width: 100%;
+height: 75%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.Programming:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.Programming .maincardhtml{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 30%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Programming .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Programming .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("java.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 1rem;
+}
+.Programming .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+
+} 
+                /* andriod sdk */
+
+.Programming .maincardcss{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 50%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("python.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+
+.Programming .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+                        /* xml */
+
+.Programming .maincardjs{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 70%;top: 11.5%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("cpp.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+                        /* apis */
+
+.Programming .maincardbt{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 40%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardbt .cardbt{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardbt .cardbt:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardbt .cardbt .frontbt{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("go.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardbt .cardbt .backbt{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+                        /* jq */
+
+.Programming .maincardjq{
+position:absolute;
+width: 19rem;
+height: 20rem;
+background-color: #ecf0f1;
+left: 60%;top: 55%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Programming .maincardjq .cardjq{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Programming .maincardjq .cardjq:hover{
+transform: rotateY(180deg);
+}
+.Programming .maincardjq .cardjq .frontjq{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+
+background-image: url("csharp.png.crdownload");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Programming .maincardjq .cardjq .backjq{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+
+                    /* title of web cards */
+.Programming .progtitle{
+position: absolute;
+width: 29%;
+height: 27%;
+top:40%;left: 20px;
+border: 0px solid;
+border-bottom: 0px solid #3742fa;
+}
+.progtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 10%;
+font-size: 4.6rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+                                                                           /* Framework */
+
+.Framework{
+width: 100%;
+height: 75%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.Framework:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.Framework .maincardhtml{
+position:absolute;
+width: 25rem;
+height: 30rem;                       
+background-color: #ecf0f1;
+left: 10%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Framework .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Framework .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("spring.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+.Framework .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+
+} 
+                /* andriod sdk */
+
+.Framework .maincardcss{
+position:absolute;
+width: 25rem;
+height: 30rem;  
+background-color: #ecf0f1;
+left: 40%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("node.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+
+.Framework .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+                        /* xml */
+
+.Framework .maincardjs{
+position:absolute;
+width: 25rem;
+height: 30rem;  
+background-color: #ecf0f1;
+left: 70%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("net.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Framework .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+
+                    /* title of web cards */
+.Framework .frametitle{
+position: absolute;
+width: 29%;
+height: 27%;
+border: 0px solid;
+top:-9%;left: 30%;
+border-bottom: 0px solid #3742fa;
+}
+.frametitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 40%;left: 5%;
+font-size: 8rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+                                                    /* digital marketing and fashion design */
+
+.markfash{
+width: 100%;
+height: 82%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.markfash:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.markfash .maincardhtml{
+position:absolute;
+width: 39rem;
+height: 39rem;
+background-color: #ecf0f1;
+left: 8%;top:11%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.markfash .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.markfash .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("https://yourspost.com/wp-content/uploads/2020/10/digital-marketing.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 50%;
+}
+.markfash .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+
+} 
+                /* andriod sdk */
+
+.markfash .maincardcss{
+position:absolute;
+width: 39rem;
+height: 39rem;
+background-color: #ecf0f1;
+left: 54%;top: 11%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.markfash .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.markfash .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("fash.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 50%;
+}
+
+.markfash .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+}
+.dhead4{
+    position: absolute;
+    top: 70px;
+    left: 90px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.dpara{
+    position: absolute;
+    top: 130px;
+    left:27px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.dreadmore{
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    animation: change 3s infinite;
+}
+.dreadmore:hover{
+    border: 3px solid;
+}
+
+ 
+
+
+                    /* title of web cards */
+.markfash .dmfdtitle{
+position: absolute;
+width: 50%;
+height: 27%;
+top:1%;left: 25%;
+border: 0px solid #3742fa;
+}
+.dmfdtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top:0%;left: 5%;
+font-size: 3rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.footlogo{
+    width:22%;
+    height:90%;
+    background-color:#ecf0f1;
+    position:relative;
+    border: 0px solid;
+    top:10px;
+    left:10px;
+  }
+  .footlogo img{
+    width:60px;
+    position:relative;
+    top:12px;
+  }
+  .footlogo > h1{
+    position:absolute;
+    top:25px;
+    left:60px;
+    color:black;
+    font-weight:bold;
+    font-size:25px;
+  }
+
+  .bffooter .footlogo i{
+    position:absolute;
+    left:20px;
+    font-size:30px;
+    padding:15px 5px 15px 0px;
+  }
+
+  .bffooter .footlogo .social ul li a i{
+    position:absolute;
+    left:5px;
+    font-size:20px;
+    padding:10px 0px 15px 0px;
+  }
+
+  
+
+  .bffooter:hover{
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+  }
+
+  .bffooter .footlogo h4{
+    position:relative;
+    left:50px;
+    top:15px;
+    font-size: 13px;
+  }
+  
+  .bffooter .footlogo a{
+    text-decoration:none;
+    background-color:#ecf0f1;
+    color:black;
+    position:relative;
+    left:50px;
+    font-size: 15px;
+    top:23px;
+  }
+  .bffooter .footlogo a:hover{
+    color:#3742fa;
+  }
+
+  .social{
+    width:100%;
+    height:180px;
+    position:absolute;
+    top:59%;
+    border:0px solid;
+  }
+  .social > h2{
+    position:relative;
+    left:10%;
+    top:10px;
+    font-size:20px;
+}
+
+
+
+
+
+
+}                                                                   /*#4 close  1000 - 1180px*/
+
+                                                                    /*#5 start  1180 - 1515px*/
+
+
+@media (min-width: 1180px) and (max-width: 1515px) {
+    
+
+
+
+                                                    /* digital marketing and fashion design */
+
+.markfash{
+width: 100%;
+height: 82%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.markfash:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.markfash .maincardhtml{
+position:absolute;
+width: 40rem;
+height: 44rem;
+background-color: #ecf0f1;
+left: 8%;top:11%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.markfash .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.markfash .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("https://yourspost.com/wp-content/uploads/2020/10/digital-marketing.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 50%;
+}
+.markfash .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+
+} 
+                /* andriod sdk */
+
+.markfash .maincardcss{
+position:absolute;
+width: 40rem;
+height: 44rem;
+background-color: #ecf0f1;
+left: 54%;top: 11%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.markfash .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.markfash .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("fash.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 50%;
+}
+
+.markfash .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+}
+.dhead4{
+    position: absolute;
+    top: 70px;
+    left: 90px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.dpara{
+    position: absolute;
+    top: 130px;
+    left:27px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.dreadmore{
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    animation: change 3s infinite;
+}
+.dreadmore:hover{
+    border: 3px solid;
+}
+
+ 
+
+
+                    /* title of web cards */
+.markfash .dmfdtitle{
+position: absolute;
+width: 50%;
+height: 27%;
+top:1%;left: 25%;
+border: 0px solid #3742fa;
+}
+.dmfdtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top:0%;left: 5%;
+font-size: 3rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+                                                                           /* Framework */
+
+.Framework{
+width: 100%;
+height: 75%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.Framework:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.Framework .maincardhtml{
+position:absolute;
+width: 25rem;
+height: 30rem;                       
+background-color: #ecf0f1;
+left: 10%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.Framework .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.Framework .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("spring.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+.Framework .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+
+} 
+                /* andriod sdk */
+
+.Framework .maincardcss{
+position:absolute;
+width: 25rem;
+height: 30rem;  
+background-color: #ecf0f1;
+left: 40%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("node.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+
+.Framework .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+                        /* xml */
+
+.Framework .maincardjs{
+position:absolute;
+width: 25rem;
+height: 30rem;  
+background-color: #ecf0f1;
+left: 70%;top: 32%;
+border-radius: 1rem;
+box-shadow:
+  0 1.5px 2.9px -65px rgba(0, 0, 0, 0.172),
+  0 4px 9.6px -65px rgba(0, 0, 0, 0.237),
+  0 71px 43px -65px rgba(0, 0, 0, 0.36)
+;
+}
+.Framework .maincardjs .cardjs{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.Framework .maincardjs .cardjs:hover{
+transform: rotateY(180deg);
+}
+.Framework .maincardjs .cardjs .frontjs{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("net.jpg");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 1rem;
+}
+            
+.Framework .maincardjs .cardjs .backjs{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 1rem;
+}
+
+
+                    /* title of web cards */
+.Framework .frametitle{
+position: absolute;
+width: 29%;
+height: 27%;
+border: 0px solid;
+top:-9%;left: 30%;
+border-bottom: 0px solid #3742fa;
+}
+.frametitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 40%;left: 5%;
+font-size: 8rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+.markfash{
+width: 100%;
+height: 82%;
+border-bottom: 0.1rem solid  black;
+position: relative;
+top: 70rem;
+}
+.markfash:hover{
+border-bottom: blue;
+box-shadow: inset 0.2rem 0.2rem 1.5rem 0.5rem #acb0e4be;
+}
+
+.markfash .maincardhtml{
+position:absolute;
+width: 39rem;
+height: 39rem;
+background-color: #ecf0f1;
+left: 8%;top:11%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardhtml .cardhtml{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+}
+.markfash .maincardhtml .cardhtml:hover{
+transform: rotateY(180deg);
+}
+
+.markfash .maincardhtml .cardhtml .fronthtml{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: honeydew;
+background-image: url("https://yourspost.com/wp-content/uploads/2020/10/digital-marketing.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 50%;
+}
+.markfash .maincardhtml .cardhtml .backhtml{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+
+} 
+                /* andriod sdk */
+
+.markfash .maincardcss{
+position:absolute;
+width: 39rem;
+height: 39rem;
+background-color: #ecf0f1;
+left: 54%;top: 11%;
+border-radius: 50%;
+box-shadow:
+  0 0.6px 8px -10px rgba(0, 0, 0, 0.108),
+  0 0.7px 22.2px -10px rgba(0, 0, 0, 0.15),
+  0 3.6px 53.4px -10px rgba(0, 0, 0, 0.183),
+  0 29px 177px -10px rgba(0, 0, 0, 0.26)
+;
+}
+.markfash .maincardcss .cardcss{
+position:absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 0.5s ease;
+
+}
+.markfash .maincardcss .cardcss:hover{
+transform: rotateY(180deg);
+}
+.markfash .maincardcss .cardcss .frontcss{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-image: url("fash.png");
+/* background-color: #5352ed; */
+background-repeat: no-repeat;
+background-size: 100% 100%;
+border-radius: 50%;
+}
+
+.markfash .maincardcss .cardcss .backcss{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #1e90ff;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-radius: 50%;
+}
+.dhead4{
+    position: absolute;
+    top: 70px;
+    left: 90px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.dpara{
+    position: absolute;
+    top: 130px;
+    left:27px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.dreadmore{
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    border: 3px solid #1e90ff;
+    background: #1e90ff;
+    animation: change 3s infinite;
+}
+.dreadmore:hover{
+    border: 3px solid;
+}
+
+ 
+
+
+                    /* title of web cards */
+.markfash .dmfdtitle{
+position: absolute;
+width: 50%;
+height: 27%;
+top:1%;left: 25%;
+border: 0px solid #3742fa;
+}
+.dmfdtitle .logodiv{
+position: absolute;
+width: 100%;
+height: 100%;
+top:0%;left: 5%;
+font-size: 3rem;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+.footlogo{
+    width:22%;
+    height:90%;
+    background-color:#ecf0f1;
+    position:relative;
+    border: 0px solid;
+    top:15px;
+    left:15px;
+  }
+  .footlogo img{
+    width:100px;
+  }
+  .footlogo > h1{
+    position:absolute;
+    top:30px;
+    left:90px;
+    color:black;
+    font-weight:bold;
+    font-size:30px;
+  }
+
+  .bffooter .footlogo i{
+    position:absolute;
+    left:20px;
+    font-size:30px;
+    padding:10px 5px 15px 0px;
+  }
+
+  .bffooter .footlogo .social ul li a i{
+    position:absolute;
+    left:0px;
+  }
+
+  
+
+  .bffooter:hover{
+    box-shadow: inset 2px 2px 15px 5px #acb0e4be;
+  }
+
+  .bffooter .footlogo h4{
+    position:relative;
+    left:60px;
+    top:15px;
+  }
+  
+  .bffooter .footlogo a{
+    text-decoration:none;
+    background-color:#ecf0f1;
+    color:black;
+    position:relative;
+    left:60px;
+    top:15px;
+  }
+  .bffooter .footlogo a:hover{
+    color:#3742fa;
+  }
+
+  .social{
+    width:100%;
+    height:180px;
+    position:absolute;
+    top:59%;
+    border:0px solid;
+  }
+  .social > h2{
+    position:relative;
+    left:14%;
+    top:10px;
+}
+
+
+
+
+
+
+}                                                                 /*#5 close  1180 - 1515px*/
+
+
+
+
+div > a{
+    margin: 1rem;
+    padding: 1rem;
+    border: 0px solid red;
+    text-decoration: none;
+    position: absolute;
+    top: 60px;
+    background-color: #4b7bec;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.drop_anker{
+    float:left;
+}
+
+
+.scroll-up-btn{
+    position: fixed;
+    height: 4.2rem;
+    width: 4.2rem;
+    background: #4b7bec;
+    right: 3rem;
+    bottom: 1rem;
+    text-align: center;
+    line-height: 4.5rem;
+    color: #fff;
+    z-index: 9999;
+    font-size: 3.0rem;
+    border-radius: 50%;
+    border-bottom-width: 0.2rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 3rem;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    /* filter: brightness(90%); */
+    background: transparent;
+    color: #4b7bec;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+
+.secondnav ul a{
+    color: white;
+}
+
+
+
+                        
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
